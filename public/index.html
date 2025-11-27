@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gerenciador de Tarefas</title>
+  <link rel="stylesheet" href="assets/index.css">
+</head>
+<body>
+  <header>
+    <span>Gerenciador de Tarefas</span>
+    <a href="/logout" class="btn-logout">Sair</a>
+  </header>
+
+  <div class="container">
+    <h2>Painel Principal</h2>
+
+    <div class="actions">
+      <div class="card" id="btn-new-task">
+        <h3>Criar Tarefa</h3>
+        <p>Adicionar tarefa rápida (Inbox)</p>
+      </div>
+
+      <div class="card" id="btn-new-project">
+        <h3>Criar Projeto</h3>
+        <p>Organizar tarefas em grupo</p>
+      </div>
+    </div>
+
+    <section class="form-area" id="form-area"></section>
+
+    <section class="project-list" id="project-list">
+      <h3>Meus Projetos</h3>
+      <div id="list"></div>
+    </section>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

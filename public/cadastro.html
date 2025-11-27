@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cadastro</title>
+  <link rel="stylesheet" href="assets/login.css">
+</head>
+<body>
+  <main class="login-container">
+    <section class="login-box">
+      <h1>Crie sua conta</h1>
+
+      <form id="cadastroForm" method="POST" action="/cadastro">
+        <input type="text" placeholder="Nome completo" name="nome" required>
+        <input type="email" placeholder="E-mail" name="email" required>
+        <input type="password" placeholder="Crie uma senha" name="senha" required>
+        <input type="password" placeholder="Confirme a senha" name="confirmar_senha" required>
+        <button type="submit" class="btn">Cadastrar</button>
+      </form>
+      
+      <p id="msg-erro" style="color: red; display: none; margin-top: 10px;">As senhas não conferem ou e-mail já existe.</p>
+      <script>
+        if(window.location.search.includes('erro=')) {
+          document.getElementById('msg-erro').style.display = 'block';
+        }
+      </script>
+
+      <p class="Suporte">Já tem uma conta? <a href="login.html">Entre aqui</a></p>
+    </section>
+  </main>
+</body>
+</html>
